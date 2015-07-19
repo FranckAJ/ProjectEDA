@@ -41,6 +41,6 @@ public class Pessoa {
 
 	@Override
 	public String toString() {
-		return "Pessoa [nome=" + nome + ", sexo=" + sexo + ", idade=" + idade + "]";
+		return "[Pessoa nome:" + nome + ", sexo:" + sexo + ", idade:" + idade +"]";
 	}
 }
