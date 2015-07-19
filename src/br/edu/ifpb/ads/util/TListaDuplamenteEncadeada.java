@@ -90,11 +90,9 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 			this.inserirNoFinal(valor);
 
 		else {
-			TNo<T> noNaPosicao = this.getNoPelaPosicao(posicao - 1);
+			TNo<T> noNaPosicao = this.getNoPelaPosicao(posicao - 2);
 			TNo<T> novoNo = new TNo(noNaPosicao.getAnt(), noNaPosicao.getProx(), valor);
-			noNaPosicao = noNaPosicao.getAnt();
 			noNaPosicao.setProx(novoNo);
-
 		}
 	}
 
