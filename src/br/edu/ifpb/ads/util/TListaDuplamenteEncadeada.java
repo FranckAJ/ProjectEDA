@@ -36,7 +36,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * 
 	 */
 	@Override
-	public void inserirNoFinal(Object valor){
+	public void inserirNoFinal(T valor){
 
 		TNo<T> novoNo = new TNo(noInicio, null, valor);
 
@@ -55,7 +55,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * 
 	 */
 	@Override
-	public void inserirNoInicio(Object valor){
+	public void inserirNoInicio(T valor){
 
 		TNo<T> novoNo = new TNo(null, noInicio, valor);
 
@@ -78,7 +78,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * 
 	 */
 	@Override
-	public void inserirNumaPosicao(int valor, int posicao) throws PosicaoInvalidaException {
+	public void inserirNumaPosicao(T valor, int posicao) throws PosicaoInvalidaException {
 
 		if (posicao < 0 || posicao > getTamanho())
 			throw new PosicaoInvalidaException();
@@ -180,7 +180,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 *          
 	 */
 	@Override
-	public T removerElemento(Object valor) throws EstruturaVaziaException, ElementoInexistenteException {
+	public T removerElemento(T valor) throws EstruturaVaziaException, ElementoInexistenteException {
 
 		if (isVazia())
 			throw new EstruturaVaziaException();
@@ -203,7 +203,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * @return - true se existir, false se não existir
 	 */
 	@Override
-	public boolean existe(Object valor) {
+	public boolean existe(T valor) {
 		if (isVazia())
 			return false;
 
@@ -255,7 +255,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 *             
 	 */
 	@Override
-	public int posicaoDoElemento(Object valor) throws EstruturaVaziaException, ElementoInexistenteException {
+	public int posicaoDoElemento(T valor) throws EstruturaVaziaException, ElementoInexistenteException {
 		if (isVazia())
 			throw new EstruturaVaziaException();
 		
@@ -307,7 +307,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * 
 	 * @throws ElementoInexistenteException - valor não existe na lista
 	 */
-	public TNo getNoPeloValor(Object valor) throws ElementoInexistenteException {
+	public TNo getNoPeloValor(T valor) throws ElementoInexistenteException {
 
 		TNo<T> aux = noInicio;
 

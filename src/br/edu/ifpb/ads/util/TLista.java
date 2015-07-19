@@ -17,7 +17,7 @@ public interface TLista<T> {
 	
 	void inserirNoInicio(T valor);
 	
-	void inserirNumaPosicao(int valor, int posicao) throws PosicaoInvalidaException;
+	void inserirNumaPosicao(T valor, int posicao) throws PosicaoInvalidaException;
 	
 	T removerDoFinal() throws EstruturaVaziaException;
 	
