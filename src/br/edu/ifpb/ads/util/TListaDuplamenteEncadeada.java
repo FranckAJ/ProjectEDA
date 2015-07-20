@@ -39,7 +39,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	@Override
 	public void inserirNoFinal(T valor) {
 
-		TNo<T> novoNo = new TNo(noInicio, null, valor);
+		TNo<T> novoNo = new TNo(noFim, null, valor);
 
 		if (isVazia()) {
 			this.inserirNoInicio(valor);
@@ -95,9 +95,12 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 			this.inserirNoFinal(valor);
 
 		else {
-			TNo<T> noNaPosicao = this.getNoPelaPosicao(posicao - 2);
-			TNo<T> novoNo = new TNo(noNaPosicao.getAnt(), noNaPosicao.getProx(), valor);
-			noNaPosicao.setProx(novoNo);
+			TNo<T> noAnterior = this.getNoPelaPosicao(posicao - 2);
+			TNo<T> noProximo = noAnterior.getProx();
+			TNo<T> novoNo = new TNo(noAnterior.getAnt(), noAnterior.getProx(), valor);
+			
+			noAnterior.setProx(novoNo);
+			noProximo.setAnt(novoNo);
 		}
 	}
 
