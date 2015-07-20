@@ -43,6 +43,18 @@ public class AplicacaoPessoa {
 	public void removerPessoa(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException{
 		pessoas.removerElemento(pessoa);
 	}
+	
+	public boolean pessoaExiste(Pessoa pessoa){
+		return pessoas.existe(pessoa);
+	}
+	
+	public Pessoa getPessoa(int posicao) throws EstruturaVaziaException, PosicaoInvalidaException{
+		return pessoas.elementoDaPosicao(posicao);
+	}
+	
+	public int getPosicao(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException{
+		return pessoas.posicaoDoElemento(pessoa);
+	}
 
 	public String getListaPessoas() {
 		return pessoas.toString();
