@@ -32,8 +32,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	 * 
 	 * Metodo responsável por enserir um elemento no final da lista
 	 * 
-	 * @param valor
-	 *            - valor que será inserido na lista
+	 * @param valor - valor que será inserido na lista
 	 * 
 	 */
 	@Override
@@ -52,8 +51,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Insere um elemento no inicio da lista
 	 * 
-	 * @param valor
-	 *            - valor que será inserido na lista
+	 * @param valor - valor que será inserido na lista
 	 * 
 	 */
 	@Override
@@ -72,14 +70,11 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metodo insere um elemento na lista em uma posicao passada por parametro
 	 * 
-	 * @param valor
-	 *            - valor a ser inserido na lista
+	 * @param valor - valor a ser inserido na lista
 	 * 
-	 * @param posicao
-	 *            - posicao em que o valor será inserido
+	 * @param posicao - posicao em que o valor será inserido
 	 * 
-	 * @throws PosicaoInvalidaException
-	 *             - posição invalida
+	 * @throws PosicaoInvalidaException - posição invalida
 	 * 
 	 */
 	@Override
@@ -151,11 +146,9 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * metodo remove um elemento de uma posicao especifica
 	 * 
-	 * @throws EstruturaVaziaException
-	 *             - lista vazia
+	 * @throws EstruturaVaziaException - lista vazia
 	 * 
-	 * @throws PosicaoInvalidaException
-	 *             - posição invalida
+	 * @throws PosicaoInvalidaException - posição invalida
 	 *
 	 * @return elemento removido
 	 */
@@ -189,16 +182,13 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metódo remove um nó da lista correspodente valor passado por paramentro
 	 * 
-	 * @param valor
-	 *            - valor da correspodente ao nó
+	 * @param valor - valor da correspodente ao nó
 	 * 
 	 * @return - elemento corrrespodente ao no
 	 * 
-	 * @throws EstruturaVaziaException
-	 *             - se a lista vazia
+	 * @throws EstruturaVaziaException - se a lista vazia
 	 * 
-	 * @throws ElementoInexistenteException
-	 *             - quando valor não existe na lista
+	 * @throws ElementoInexistenteException - quando valor não existe na lista
 	 * 
 	 */
 	@Override
@@ -220,8 +210,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metódo verifica se o elemento passado por parametro existe na lista
 	 * 
-	 * @param valor
-	 *            - valor que será verificado se existe
+	 * @param valor - valor que será verificado se existe
 	 * 
 	 * @return - true se existir, false se não existir
 	 */
@@ -242,16 +231,13 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metódo retorna um valor correspondente um uma posicão da lista
 	 * 
-	 * @param posicao
-	 *            - posição da lista
+	 * @param posicao - posição da lista
 	 * 
 	 * @return - elemento da posição
 	 * 
-	 * @throws EstruturaVaziaException
-	 *             - lista vazia
+	 * @throws EstruturaVaziaException - lista vazia
 	 * 
-	 * @throws PosicaoInvalidaException
-	 *             - posição inexistente
+	 * @throws PosicaoInvalidaException - posição inexistente
 	 * 
 	 */
 	@Override
@@ -271,16 +257,13 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metodo retorna a posição de um elemento passado por parametro
 	 * 
-	 * @param valor
-	 *            - valor que contem na lista
+	 * @param valor - valor que contem na lista
 	 * 
 	 * @return - posição do elemento
 	 * 
-	 * @throws EstruturaVaziaException
-	 *             - lista estiver fazia
+	 * @throws EstruturaVaziaException - lista estiver fazia
 	 * 
-	 * @throws ElementoInexistenteException
-	 *             - elemento não existe na lista
+	 * @throws ElementoInexistenteException - elemento não existe na lista
 	 * 
 	 */
 	@Override
@@ -313,10 +296,9 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Retorna um nó na lista referente a posição passada por parametro
 	 * 
-	 * @param posicao
-	 *            - posicão da lista
+	 * @param posicao - posicão da lista
 	 * 
-	 * @return - nó referente a posição
+	 * @return nó referente a posição
 	 */
 	public TNo getNoPelaPosicao(int posicao) {
 
@@ -331,13 +313,12 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * Metodo retorna no correspondente ao valor passado por parametro
 	 * 
-	 * @param valor
-	 *            - valor do no
+	 * @param valor do no
 	 * 
-	 * @return - nó correspodente ao valor
+	 * @return nó correspodente ao valor
 	 * 
-	 * @throws ElementoInexistenteException
-	 *             - valor não existe na lista
+	 * @throws ElementoInexistenteException valor não existe na lista
+	 *             
 	 */
 	public TNo getNoPeloValor(T valor) throws ElementoInexistenteException {
 
@@ -369,7 +350,7 @@ public class TListaDuplamenteEncadeada<T> implements TLista<T> {
 	/**
 	 * retorna a representação da lista em String
 	 * 
-	 * @return - a lista em formato de String
+	 * @return  a lista em formato de String
 	 */
 	public String toString() {
 
