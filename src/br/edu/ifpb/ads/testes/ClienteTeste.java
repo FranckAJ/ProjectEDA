@@ -7,6 +7,13 @@ import br.edu.ifpb.ads.exceptions.EstruturaVaziaException;
 import br.edu.ifpb.ads.exceptions.PosicaoInvalidaException;
 import br.edu.ifpb.ads.util.TListaDuplamenteEncadeada;
 
+/**
+ * Classe cliente teste, com interface via linha de comando para execução de
+ * testes
+ * 
+ * @author franck
+ *
+ */
 public class ClienteTeste {
 
 	public static void menu() {
@@ -71,18 +78,18 @@ public class ClienteTeste {
 					break;
 				case 8:
 					System.out.println("Elemento>>");
-					if(lista.existe(leitor.nextInt()))
+					if (lista.existe(leitor.nextInt()))
 						System.out.println("Elemento Existe na lista!");
 					else
 						System.out.println("Elemento não existe na lista");
 					break;
 				case 9:
 					System.out.println("Posição>>");
-					System.out.println("Elemento: "+lista.elementoDaPosicao(leitor.nextInt()));
+					System.out.println("Elemento: " + lista.elementoDaPosicao(leitor.nextInt()));
 					break;
 				case 10:
 					System.out.println("Elemento>>");
-					System.out.println("Posição: "+lista.posicaoDoElemento(leitor.nextInt()));
+					System.out.println("Posição: " + lista.posicaoDoElemento(leitor.nextInt()));
 					break;
 				case 11:
 					System.out.println(lista.getTamanho());
@@ -92,7 +99,7 @@ public class ClienteTeste {
 					break;
 				}
 			} catch (EstruturaVaziaException | PosicaoInvalidaException | ElementoInexistenteException e) {
-				e.printStackTrace();
+				System.err.println(e.getMessage());
 			}
 		} while (opcSair);
 	}

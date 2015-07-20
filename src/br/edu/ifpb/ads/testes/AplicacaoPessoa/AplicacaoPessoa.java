@@ -5,6 +5,13 @@ import br.edu.ifpb.ads.exceptions.EstruturaVaziaException;
 import br.edu.ifpb.ads.exceptions.PosicaoInvalidaException;
 import br.edu.ifpb.ads.util.TListaDuplamenteEncadeada;
 
+/**
+ * Classe que contem metodos para inserção, remoção e recuperação de pessoas,
+ * uasando a lista duplamente encadeada
+ * 
+ * @author franck
+ *
+ */
 public class AplicacaoPessoa {
 
 	private TListaDuplamenteEncadeada<Pessoa> pessoas;
@@ -27,36 +34,49 @@ public class AplicacaoPessoa {
 		Pessoa pessoa = new Pessoa(nome, sexo, idade);
 		pessoas.inserirNumaPosicao(pessoa, 2);
 	}
-	
-	public void removeInicio() throws EstruturaVaziaException{
+
+	public void removeInicio() throws EstruturaVaziaException {
 		pessoas.removerDoInicio();
 	}
-	
-	public void removeFim() throws EstruturaVaziaException{
+
+	public void removeFim() throws EstruturaVaziaException {
 		pessoas.removerDoFinal();
 	}
-	
-	public void removePosicao(int posicao) throws EstruturaVaziaException, PosicaoInvalidaException{
+
+	public void removePosicao(int posicao) throws EstruturaVaziaException, PosicaoInvalidaException {
 		pessoas.removerDaPosicao(posicao);
 	}
-	
-	public void removerPessoa(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException{
+
+	public void removerPessoa(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException {
 		pessoas.removerElemento(pessoa);
 	}
-	
-	public boolean pessoaExiste(Pessoa pessoa){
+
+	public boolean PessoaExiste(Pessoa pessoa) {
 		return pessoas.existe(pessoa);
 	}
-	
-	public Pessoa getPessoa(int posicao) throws EstruturaVaziaException, PosicaoInvalidaException{
+
+	public boolean pessoaExiste(Pessoa pessoa) {
+		return pessoas.existe(pessoa);
+	}
+
+	public Pessoa getPessoa(int posicao) throws EstruturaVaziaException, PosicaoInvalidaException {
 		return pessoas.elementoDaPosicao(posicao);
 	}
-	
-	public int getPosicao(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException{
+
+	public int getPosicao(Pessoa pessoa) throws EstruturaVaziaException, ElementoInexistenteException {
 		return pessoas.posicaoDoElemento(pessoa);
 	}
 
 	public String getListaPessoas() {
 		return pessoas.toString();
 	}
+
+	public TListaDuplamenteEncadeada<Pessoa> getPessoas() {
+		return pessoas;
+	}
+
+	public void setPessoas(TListaDuplamenteEncadeada<Pessoa> pessoas) {
+		this.pessoas = pessoas;
+	}
+
 }
