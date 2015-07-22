@@ -11,8 +11,6 @@ import br.edu.ifpb.ads.exceptions.PosicaoInvalidaException;
  * 
  * @author Franck Aragão
  * 
- * @version 1.0
- *
  * @param <T>
  */
 public class TListaDuplamenteEncadeada<T> implements TLista<T> {
